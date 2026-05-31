@@ -231,37 +231,20 @@
     });
 
     let audioCtx, musicGain, musicTimer, musicOn = false;
-    function startSoftMusic(){
-      if(musicOn) return;
-      audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
-      musicGain = musicGain || audioCtx.createGain();
-      musicGain.gain.value = 0.035;
-      musicGain.connect(audioCtx.destination);
-      const notes = [523.25, 659.25, 783.99, 659.25];
-      let i = 0;
-      function playNote(){
-        if(!musicOn) return;
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.value = notes[i % notes.length];
-        gain.gain.setValueAtTime(0, audioCtx.currentTime);
-        gain.gain.linearRampToValueAtTime(0.12, audioCtx.currentTime + .06);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.4);
-        osc.connect(gain); gain.connect(musicGain);
-        osc.start(); osc.stop(audioCtx.currentTime + 1.45);
-        i++;
-      }
-      musicOn = true;
-      document.querySelector('.music').innerHTML = '<span>♫</span>Music';
-      playNote();
-      musicTimer = setInterval(playNote, 1500);
-    }
-    function stopSoftMusic(){
-      musicOn = false;
-      clearInterval(musicTimer);
-      document.querySelector('.music').innerHTML = '<span>♪</span>Muted';
-    }
+function startSoftMusic(){
+  const music = document.getElementById('music');
+  music.play();
+  musicOn = true;
+  document.querySelector('.music').innerHTML =
+  '<span>♫</span>Music';
+}
+function stopSoftMusic(){
+  const music = document.getElementById('music');
+  music.pause();
+  musicOn = false;
+  document.querySelector('.music').innerHTML =
+  '<span>♪</span>Muted';
+}
 
     function openInvitation(){
       const intro = document.getElementById('intro');
