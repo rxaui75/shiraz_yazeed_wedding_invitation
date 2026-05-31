@@ -33,7 +33,7 @@
       background:radial-gradient(circle at top,#fffaf2 0%,#eee3d4 42%,#cbbba2 100%);
       overflow:hidden;transition:opacity .9s ease,visibility .9s ease;
     }
-    .intro:before{content:"";position:absolute;inset:0;background:url('skyhall-2.jpeg') center/cover no-repeat;opacity:.16;filter:blur(2px);transform:scale(1.05)}
+    .intro:before{content:"";position:absolute;inset:0;background:url('skyhall-2.png') center/cover no-repeat;opacity:.16;filter:blur(2px);transform:scale(1.05)}
     .intro.hide{opacity:0;visibility:hidden;pointer-events:none}
     .envelope-wrap{position:relative;z-index:2;width:min(82vw,330px);height:230px;display:grid;place-items:center;cursor:pointer;perspective:1000px;animation:float 3s ease-in-out infinite}
     .envelope{position:relative;width:100%;height:205px;border-radius:8px;background:#f7f1e8;box-shadow:0 28px 65px rgba(60,42,24,.22);border:1px solid rgba(184,149,88,.22);overflow:hidden}
@@ -47,17 +47,17 @@
     .intro.opening .flap{transform:rotateX(180deg)}
     .intro.opening .seal{transform:translateX(-50%) scale(.15);opacity:0}
     .intro.opening .envelope{animation:zoomAway 1.2s .35s ease forwards}
-    .intro-card{position:absolute;z-index:1;width:88%;height:210px;border-radius:16px;background:url('skyhall-1.jpeg') center/cover no-repeat;transform:translateY(40px) scale(.86);opacity:0;box-shadow:0 20px 50px rgba(0,0,0,.20);transition:1s .25s ease;overflow:hidden}
+    .intro-card{position:absolute;z-index:1;width:88%;height:210px;border-radius:16px;background:url('skyhall-1.png') center/cover no-repeat;transform:translateY(40px) scale(.86);opacity:0;box-shadow:0 20px 50px rgba(0,0,0,.20);transition:1s .25s ease;overflow:hidden}
     .intro-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(0,0,0,.18))}
     .intro-card span{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;font-family:'Great Vibes',cursive;font-size:42px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
     .intro.opening .intro-card{opacity:1;transform:translateY(-105px) scale(1)}
-    body.lock{overflow:hidden}
+    body.lock{overflow:hidden} body.lock .page{height:100vh;overflow:hidden}
     @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
     @keyframes zoomAway{to{transform:scale(1.22);opacity:0}}
 
 
     .page{max-width:430px;margin:auto;background:var(--ivory);box-shadow:0 0 45px rgba(0,0,0,.12);overflow:hidden;position:relative}
-    .hero{height:100vh;min-height:760px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:url('skyhall-1.jpeg') center/cover no-repeat;}
+    .hero{height:100vh;min-height:760px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:url('skyhall-1.png') center/cover no-repeat;}
     .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(255,255,255,.10) 34%,rgba(255,255,255,.82) 100%)}
     .hero:after{content:"";position:absolute;width:520px;height:520px;background:radial-gradient(circle,rgba(255,255,255,.88),rgba(255,255,255,.35) 42%,transparent 70%);filter:blur(2px)}
     .music{position:absolute;right:18px;top:22px;z-index:5;width:55px;height:55px;border-radius:50%;border:1px solid rgba(255,255,255,.75);background:rgba(82,61,35,.56);color:white;display:grid;place-items:center;font-size:11px;backdrop-filter:blur(6px)}
@@ -74,11 +74,11 @@
     .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}.countdown div:not(:last-child){border-right:1px solid #ded4c6}.num{font-family:'Cormorant Garamond',serif;color:#8a6a3b;font-size:40px;line-height:1}.label{font-size:10px;text-transform:uppercase;letter-spacing:.8px;margin-top:6px}
     .date-box{text-align:center;margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:22px}.date-box span{display:block;font-family:'Montserrat';font-size:12px;color:#746a5c;letter-spacing:2px;text-transform:uppercase;margin-top:5px}
 
-    .timeline{padding-top:30px}.line{position:absolute;top:102px;left:55px;right:55px;height:1px;background:#d7bd8b}.events{display:grid;grid-template-columns:1fr;gap:18px;position:relative}.event{position:relative;text-align:center;padding-top:26px}.icon{width:64px;height:64px;border-radius:50%;background:#fff;border:1px solid #d8bd8d;box-shadow:0 8px 18px rgba(0,0,0,.09);display:grid;place-items:center;margin:0 auto -8px;color:#8b6c3e;font-size:27px;position:relative;z-index:2}.event .card{padding:28px 12px 18px}.time{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700}.event-name{font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-top:5px}
+    .timeline{padding:58px 22px 66px;background:linear-gradient(180deg,#6f0f18 0%,#7d141d 55%,#6b1018 100%);color:#fff;overflow:hidden}.timeline:before,.timeline:after{content:"";position:absolute;left:-8%;width:116%;height:34px;background:#fffdf8;z-index:1;filter:drop-shadow(0 4px 5px rgba(0,0,0,.05))}.timeline:before{top:-1px;clip-path:polygon(0 0,100% 0,100% 42%,92% 68%,83% 48%,73% 72%,61% 50%,49% 76%,38% 52%,27% 72%,16% 47%,7% 69%,0 45%)}.timeline:after{bottom:-1px;clip-path:polygon(0 58%,8% 35%,17% 52%,28% 30%,39% 52%,50% 28%,61% 50%,73% 31%,84% 54%,93% 34%,100% 55%,100% 100%,0 100%)}.timeline .title{color:#f8efe7;position:relative;z-index:2;font-family:'Great Vibes',cursive;text-transform:none;letter-spacing:.5px;font-size:34px}.timeline .title:before,.timeline .title:after{background:#eacda0}.schedule-wrap{position:relative;z-index:2;width:min(330px,100%);margin:14px auto 0;padding:8px 0 0}.schedule-line{position:absolute;top:16px;bottom:18px;left:50%;width:1px;background:rgba(255,255,255,.75);transform:translateX(-50%)}.schedule-item{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;min-height:86px}.schedule-time{font-family:'Cormorant Garamond',serif;font-size:28px;text-align:right;padding-right:16px;color:#fff}.schedule-dot{width:11px;height:11px;border-radius:50%;background:#fff;margin:auto;box-shadow:0 0 0 6px rgba(255,255,255,.08);z-index:2}.schedule-dot.big{width:46px;height:46px;background:#f8efe7;box-shadow:0 0 0 7px rgba(255,255,255,.14);display:grid;place-items:center}.schedule-dot.big:after{content:'✿';color:#7a141d;font-size:23px}.schedule-name{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.05;text-align:left;padding-left:16px;color:#fff}.schedule-note{text-align:center;margin-top:20px;font-family:'Cormorant Garamond',serif;color:#f2d9bd;font-size:18px;letter-spacing:.3px}
 
     .details-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{text-align:center;padding:18px 10px}.mini .i{font-size:26px;color:#8b6c3e;margin-bottom:8px}.mini h3{font-family:'Cormorant Garamond',serif;color:#9d7a43;text-transform:uppercase;font-size:16px;letter-spacing:1px;margin-bottom:7px}.mini p{font-size:12px;line-height:1.55}.dots{display:flex;justify-content:center;gap:9px;margin-top:6px}.dot{width:19px;height:19px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
     .venue{display:grid;gap:20px}.venue img{width:100%;height:220px;object-fit:cover;border-radius:16px;box-shadow:0 15px 30px rgba(0,0,0,.12)}.venue-text{text-align:center}.venue-text h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500;margin:6px 0}.venue-text p{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.35;margin-bottom:18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:12px;padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:1px solid var(--gold);color:#7b5d32;background:#fff}.btn.primary{background:var(--burgundy);color:#fff;border-color:var(--burgundy);box-shadow:0 10px 22px rgba(116,19,27,.25)}
-    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gallery img{width:100%;height:210px;object-fit:cover;border-radius:18px}.gallery img:first-child{grid-column:1/3;height:260px}
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gallery img{width:100%;height:210px;object-fit:cover;border-radius:18px}.gallery img:first-child{grid-column:1/3;height:260px}.gallery img:last-child{grid-column:1/3;height:250px}
     .rsvp{text-align:center}.rsvp p{font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:20px}.rsvp-actions{display:grid;grid-template-columns:1fr;gap:12px}.quote{text-align:center;padding:50px 30px 64px;background:linear-gradient(180deg,#fffdf8,#f7f0e5);position:relative}.quote:before,.quote:after{content:"✿";position:absolute;color:#d3c5aa;font-size:70px;opacity:.55}.quote:before{left:-18px;bottom:10px}.quote:after{right:-16px;top:20px}.quote h2{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:500;line-height:1.3}.quote p{margin-top:18px;color:#8b6c3e;font-family:'Cormorant Garamond',serif;font-size:18px}
     .reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.show{opacity:1;transform:translateY(0)}
     @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes wheel{0%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,15px)}}
@@ -124,12 +124,31 @@
     </section>
 
     <section class="timeline reveal">
-      <h2 class="title">Timeline</h2>
-      <div class="events">
-        <div class="event"><div class="icon">❊</div><div class="card"><div class="time">7:00 p.m</div><div class="event-name">Zaffeh</div></div></div>
-        <div class="event"><div class="icon">♕</div><div class="card"><div class="time">7:20 p.m</div><div class="event-name">Only Women</div></div></div>
-        <div class="event"><div class="icon">♡</div><div class="card"><div class="time">8:00 – 10:00 p.m</div><div class="event-name">Women & Men</div></div></div>
+      <h2 class="title">Schedule of Events</h2>
+      <div class="schedule-wrap">
+        <div class="schedule-line"></div>
+        <div class="schedule-item">
+          <div class="schedule-time">7:00</div>
+          <div class="schedule-dot big"></div>
+          <div class="schedule-name">Zaffeh</div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-time">7:20</div>
+          <div class="schedule-dot"></div>
+          <div class="schedule-name">Only<br>Women</div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-time">8:00</div>
+          <div class="schedule-dot"></div>
+          <div class="schedule-name">Women<br>&amp; Men</div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-time">10:00</div>
+          <div class="schedule-dot big"></div>
+          <div class="schedule-name">End of<br>Celebration</div>
+        </div>
       </div>
+      <div class="schedule-note">Monday · 29.6.2026</div>
     </section>
 
     <section class="reveal">
@@ -145,7 +164,7 @@
     <section class="reveal">
       <h2 class="title">Venue</h2>
       <div class="venue">
-        <img src="skyhall-2.jpeg" alt="Sky Hall wedding venue">
+        <img src="skyhall-4.png" alt="Sky Hall wedding venue">
         <div class="venue-text">
           <div class="title" style="margin-bottom:6px;font-size:18px">Sky Hall</div>
           <h2>Petra Street</h2>
@@ -158,9 +177,10 @@
     <section class="reveal">
       <h2 class="title">Moments</h2>
       <div class="gallery">
-        <img src="skyhall-3.jpeg" alt="Sky Hall tables and flowers">
-        <img src="skyhall-1.jpeg" alt="Sky Hall aisle">
-        <img src="skyhall-2.jpeg" alt="Sky Hall floral stairs">
+        <img src="skyhall-2.png" alt="Sky Hall tables and flowers">
+        <img src="skyhall-1.png" alt="Sky Hall evening entrance">
+        <img src="skyhall-3.png" alt="Sky Hall floral stairs">
+        <img src="skyhall-4.png" alt="Sky Hall aisle">
       </div>
     </section>
 
@@ -204,13 +224,21 @@
 
 
 
+    window.addEventListener('load', () => {
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      window.scrollTo(0, 0);
+    });
+
     function openInvitation(){
       const intro = document.getElementById('intro');
       if(!intro || intro.classList.contains('opening')) return;
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      window.scrollTo(0, 0);
       intro.classList.add('opening');
       setTimeout(()=>{
         intro.classList.add('hide');
         document.body.classList.remove('lock');
+        window.scrollTo({top:0,left:0,behavior:'instant'});
         const audio = document.getElementById('music');
         if(audio) audio.play().catch(()=>{});
       }, 1500);
