@@ -27,6 +27,35 @@
       overflow-x:hidden;
     }
 
+    /* Opening envelope screen */
+    .intro{
+      position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;
+      background:radial-gradient(circle at top,#fffaf2 0%,#eee3d4 42%,#cbbba2 100%);
+      overflow:hidden;transition:opacity .9s ease,visibility .9s ease;
+    }
+    .intro:before{content:"";position:absolute;inset:0;background:url('skyhall-2.jpeg') center/cover no-repeat;opacity:.16;filter:blur(2px);transform:scale(1.05)}
+    .intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+    .envelope-wrap{position:relative;z-index:2;width:min(82vw,330px);height:230px;display:grid;place-items:center;cursor:pointer;perspective:1000px;animation:float 3s ease-in-out infinite}
+    .envelope{position:relative;width:100%;height:205px;border-radius:8px;background:#f7f1e8;box-shadow:0 28px 65px rgba(60,42,24,.22);border:1px solid rgba(184,149,88,.22);overflow:hidden}
+    .envelope:before,.envelope:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 49.6%,rgba(184,149,88,.22) 50%,transparent 50.7%)}
+    .envelope:after{transform:scaleX(-1)}
+    .paper-texture{position:absolute;inset:0;background:radial-gradient(circle at 20% 15%,rgba(255,255,255,.75),transparent 30%),radial-gradient(circle at 80% 85%,rgba(188,168,135,.20),transparent 35%);opacity:.9}
+    .flap{position:absolute;left:0;right:0;top:0;height:118px;background:linear-gradient(180deg,#fffaf4,#efe2cf);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;z-index:3;transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
+    .seal{position:absolute;z-index:4;width:78px;height:78px;border-radius:50%;background:radial-gradient(circle,#d7c2a0,#b89558);box-shadow:inset 0 0 0 5px rgba(255,255,255,.38),0 7px 18px rgba(80,48,20,.22);display:grid;place-items:center;color:#fff;top:64px;left:50%;transform:translateX(-50%);font-family:'Great Vibes',cursive;font-size:34px;transition:.7s ease}
+    .seal:after{content:"✿";font-family:serif;font-size:25px;color:#fffdf8}
+    .open-note{position:absolute;bottom:-48px;text-align:center;color:#765d3b;font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.3px;width:100%}
+    .intro.opening .flap{transform:rotateX(180deg)}
+    .intro.opening .seal{transform:translateX(-50%) scale(.15);opacity:0}
+    .intro.opening .envelope{animation:zoomAway 1.2s .35s ease forwards}
+    .intro-card{position:absolute;z-index:1;width:88%;height:210px;border-radius:16px;background:url('skyhall-1.jpeg') center/cover no-repeat;transform:translateY(40px) scale(.86);opacity:0;box-shadow:0 20px 50px rgba(0,0,0,.20);transition:1s .25s ease;overflow:hidden}
+    .intro-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(0,0,0,.18))}
+    .intro-card span{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;font-family:'Great Vibes',cursive;font-size:42px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+    .intro.opening .intro-card{opacity:1;transform:translateY(-105px) scale(1)}
+    body.lock{overflow:hidden}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes zoomAway{to{transform:scale(1.22);opacity:0}}
+
+
     .page{max-width:430px;margin:auto;background:var(--ivory);box-shadow:0 0 45px rgba(0,0,0,.12);overflow:hidden;position:relative}
     .hero{height:100vh;min-height:760px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:url('skyhall-1.jpeg') center/cover no-repeat;}
     .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(255,255,255,.10) 34%,rgba(255,255,255,.82) 100%)}
@@ -56,7 +85,20 @@
     @media(min-width:700px){body{padding:30px}.page{border-radius:28px}.hero{min-height:820px}.events{grid-template-columns:repeat(3,1fr)}.rsvp-actions{grid-template-columns:1fr 1fr}.venue{grid-template-columns:1fr 1fr;align-items:center}.gallery img{height:260px}}
   </style>
 </head>
-<body>
+<body class="lock">
+
+  <div class="intro" id="intro" onclick="openInvitation()">
+    <div class="envelope-wrap">
+      <div class="intro-card"><span>Shiraz &amp; Yazeed</span></div>
+      <div class="envelope">
+        <div class="paper-texture"></div>
+        <div class="flap"></div>
+        <div class="seal"></div>
+      </div>
+      <div class="open-note">Click to open</div>
+    </div>
+  </div>
+
   <main class="page">
     <header class="hero" id="home">
       <button class="music" onclick="toggleMusic()"><span>♫</span>Music</button>
@@ -159,6 +201,20 @@
       entries.forEach(entry=>{if(entry.isIntersecting) entry.target.classList.add('show')})
     },{threshold:.18});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+
+
+    function openInvitation(){
+      const intro = document.getElementById('intro');
+      if(!intro || intro.classList.contains('opening')) return;
+      intro.classList.add('opening');
+      setTimeout(()=>{
+        intro.classList.add('hide');
+        document.body.classList.remove('lock');
+        const audio = document.getElementById('music');
+        if(audio) audio.play().catch(()=>{});
+      }, 1500);
+    }
 
     function toggleMusic(){
       const audio = document.getElementById('music');
