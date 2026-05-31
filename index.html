@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiraz & Yazeed Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cream:#fbf7ef;
+      --ivory:#fffdf8;
+      --gold:#b89558;
+      --dark:#2b2926;
+      --olive:#6f7750;
+      --burgundy:#74131b;
+      --soft:#e9dfcf;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:linear-gradient(180deg,#f7f0e5,#fffdf9);
+      color:var(--dark);
+      font-family:'Montserrat',sans-serif;
+      overflow-x:hidden;
+    }
+
+    .page{max-width:430px;margin:auto;background:var(--ivory);box-shadow:0 0 45px rgba(0,0,0,.12);overflow:hidden;position:relative}
+    .hero{height:100vh;min-height:760px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:url('skyhall-1.jpeg') center/cover no-repeat;}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(255,255,255,.10) 34%,rgba(255,255,255,.82) 100%)}
+    .hero:after{content:"";position:absolute;width:520px;height:520px;background:radial-gradient(circle,rgba(255,255,255,.88),rgba(255,255,255,.35) 42%,transparent 70%);filter:blur(2px)}
+    .music{position:absolute;right:18px;top:22px;z-index:5;width:55px;height:55px;border-radius:50%;border:1px solid rgba(255,255,255,.75);background:rgba(82,61,35,.56);color:white;display:grid;place-items:center;font-size:11px;backdrop-filter:blur(6px)}
+    .music span{font-size:22px;display:block;line-height:1}
+    .hero-content{position:relative;z-index:3;padding:0 24px;animation:fadeUp 1.3s ease both}
+    .eyebrow{font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:3px;text-transform:uppercase;color:#39332c;line-height:1.5;margin-bottom:20px}
+    h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:68px;line-height:.88;color:#33302c;text-shadow:0 1px 18px rgba(255,255,255,.6)}
+    .and{font-family:'Great Vibes',cursive;font-size:42px;color:var(--gold);margin:8px 0}
+    .heart-line{margin:22px auto;color:var(--gold);font-size:24px;display:flex;align-items:center;gap:12px;justify-content:center}.heart-line:before,.heart-line:after{content:"";width:50px;height:1px;background:var(--gold)}
+    .scroll{position:absolute;bottom:48px;left:0;right:0;z-index:4;color:#6d5b45;font-family:'Cormorant Garamond',serif;letter-spacing:1px;font-size:14px}.mouse{width:24px;height:42px;border:2px solid #fff;border-radius:20px;margin:0 auto 8px;position:relative}.mouse:after{content:"";width:4px;height:8px;background:#fff;border-radius:6px;position:absolute;top:8px;left:50%;transform:translateX(-50%);animation:wheel 1.3s infinite}
+
+    section{padding:48px 22px;position:relative}.title{font-family:'Cormorant Garamond',serif;text-align:center;color:var(--gold);font-size:24px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:12px}.title:before,.title:after{content:"";height:1px;width:55px;background:var(--gold);opacity:.55}
+    .card{background:rgba(255,255,255,.86);border:1px solid rgba(184,149,88,.25);box-shadow:0 12px 35px rgba(70,50,20,.10);border-radius:18px;padding:22px;backdrop-filter:blur(8px)}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}.countdown div:not(:last-child){border-right:1px solid #ded4c6}.num{font-family:'Cormorant Garamond',serif;color:#8a6a3b;font-size:40px;line-height:1}.label{font-size:10px;text-transform:uppercase;letter-spacing:.8px;margin-top:6px}
+    .date-box{text-align:center;margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:22px}.date-box span{display:block;font-family:'Montserrat';font-size:12px;color:#746a5c;letter-spacing:2px;text-transform:uppercase;margin-top:5px}
+
+    .timeline{padding-top:30px}.line{position:absolute;top:102px;left:55px;right:55px;height:1px;background:#d7bd8b}.events{display:grid;grid-template-columns:1fr;gap:18px;position:relative}.event{position:relative;text-align:center;padding-top:26px}.icon{width:64px;height:64px;border-radius:50%;background:#fff;border:1px solid #d8bd8d;box-shadow:0 8px 18px rgba(0,0,0,.09);display:grid;place-items:center;margin:0 auto -8px;color:#8b6c3e;font-size:27px;position:relative;z-index:2}.event .card{padding:28px 12px 18px}.time{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700}.event-name{font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-top:5px}
+
+    .details-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{text-align:center;padding:18px 10px}.mini .i{font-size:26px;color:#8b6c3e;margin-bottom:8px}.mini h3{font-family:'Cormorant Garamond',serif;color:#9d7a43;text-transform:uppercase;font-size:16px;letter-spacing:1px;margin-bottom:7px}.mini p{font-size:12px;line-height:1.55}.dots{display:flex;justify-content:center;gap:9px;margin-top:6px}.dot{width:19px;height:19px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+    .venue{display:grid;gap:20px}.venue img{width:100%;height:220px;object-fit:cover;border-radius:16px;box-shadow:0 15px 30px rgba(0,0,0,.12)}.venue-text{text-align:center}.venue-text h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500;margin:6px 0}.venue-text p{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.35;margin-bottom:18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:12px;padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:1px solid var(--gold);color:#7b5d32;background:#fff}.btn.primary{background:var(--burgundy);color:#fff;border-color:var(--burgundy);box-shadow:0 10px 22px rgba(116,19,27,.25)}
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gallery img{width:100%;height:210px;object-fit:cover;border-radius:18px}.gallery img:first-child{grid-column:1/3;height:260px}
+    .rsvp{text-align:center}.rsvp p{font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:20px}.rsvp-actions{display:grid;grid-template-columns:1fr;gap:12px}.quote{text-align:center;padding:50px 30px 64px;background:linear-gradient(180deg,#fffdf8,#f7f0e5);position:relative}.quote:before,.quote:after{content:"✿";position:absolute;color:#d3c5aa;font-size:70px;opacity:.55}.quote:before{left:-18px;bottom:10px}.quote:after{right:-16px;top:20px}.quote h2{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:500;line-height:1.3}.quote p{margin-top:18px;color:#8b6c3e;font-family:'Cormorant Garamond',serif;font-size:18px}
+    .reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.show{opacity:1;transform:translateY(0)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes wheel{0%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,15px)}}
+    @media(min-width:700px){body{padding:30px}.page{border-radius:28px}.hero{min-height:820px}.events{grid-template-columns:repeat(3,1fr)}.rsvp-actions{grid-template-columns:1fr 1fr}.venue{grid-template-columns:1fr 1fr;align-items:center}.gallery img{height:260px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero" id="home">
+      <button class="music" onclick="toggleMusic()"><span>♫</span>Music</button>
+      <div class="hero-content">
+        <div class="eyebrow">You are invited to<br>celebrate the wedding of</div>
+        <h1>Shiraz</h1>
+        <div class="and">and</div>
+        <h1>Yazeed</h1>
+        <div class="heart-line">♥</div>
+      </div>
+      <a href="#count" class="scroll"><div class="mouse"></div>SCROLL DOWN</a>
+    </header>
+
+    <section id="count" class="reveal">
+      <h2 class="title">Countdown to our big day</h2>
+      <div class="card countdown">
+        <div><div class="num" id="days">00</div><div class="label">Days</div></div>
+        <div><div class="num" id="hours">00</div><div class="label">Hours</div></div>
+        <div><div class="num" id="minutes">00</div><div class="label">Minutes</div></div>
+        <div><div class="num" id="seconds">00</div><div class="label">Seconds</div></div>
+      </div>
+      <div class="date-box">Monday, 29 June 2026<span>7:00 p.m – 10:00 p.m</span></div>
+    </section>
+
+    <section class="timeline reveal">
+      <h2 class="title">Timeline</h2>
+      <div class="events">
+        <div class="event"><div class="icon">❊</div><div class="card"><div class="time">7:00 p.m</div><div class="event-name">Zaffeh</div></div></div>
+        <div class="event"><div class="icon">♕</div><div class="card"><div class="time">7:20 p.m</div><div class="event-name">Only Women</div></div></div>
+        <div class="event"><div class="icon">♡</div><div class="card"><div class="time">8:00 – 10:00 p.m</div><div class="event-name">Women & Men</div></div></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="title">Details</h2>
+      <div class="details-grid">
+        <div class="card mini"><div class="i">◷</div><h3>Time</h3><p>7:00 p.m – 10:00 p.m</p></div>
+        <div class="card mini"><div class="i">⌖</div><h3>Venue</h3><p>Sky Hall<br>Petra Street</p></div>
+        <div class="card mini"><div class="i">♕</div><h3>Dress Code</h3><p>Elegant evening colors</p><div class="dots"><span class="dot" style="background:#74131b"></span><span class="dot" style="background:#cfc4b1"></span><span class="dot" style="background:#111"></span><span class="dot" style="background:#c5a35f"></span></div></div>
+        <div class="card mini"><div class="i">▣</div><h3>Date</h3><p>Monday<br>29.6.2026</p></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="title">Venue</h2>
+      <div class="venue">
+        <img src="skyhall-2.jpeg" alt="Sky Hall wedding venue">
+        <div class="venue-text">
+          <div class="title" style="margin-bottom:6px;font-size:18px">Sky Hall</div>
+          <h2>Petra Street</h2>
+          <p>A night designed to be remembered forever ✨</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Sky%20Hall%20Petra%20Street" target="_blank">⌖ Open in Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="title">Moments</h2>
+      <div class="gallery">
+        <img src="skyhall-3.jpeg" alt="Sky Hall tables and flowers">
+        <img src="skyhall-1.jpeg" alt="Sky Hall aisle">
+        <img src="skyhall-2.jpeg" alt="Sky Hall floral stairs">
+      </div>
+    </section>
+
+    <section class="rsvp reveal">
+      <h2 class="title">Kindly RSVP</h2>
+      <p>Please let us know if you’ll be joining us</p>
+      <div class="rsvp-actions">
+        <a class="btn primary" href="https://wa.me/?text=Yes,%20I%20am%20coming%20to%20Shiraz%20and%20Yazeed's%20wedding" target="_blank">♡ Yes, I’m coming</a>
+        <a class="btn" href="https://wa.me/?text=Sorry,%20I%20can't%20attend%20Shiraz%20and%20Yazeed's%20wedding" target="_blank">♡ Sorry, can’t attend</a>
+      </div>
+    </section>
+
+    <footer class="quote">
+      <h2>“And We created you in pairs”</h2>
+      <p>Quran 78:8</p>
+      <p style="font-size:14px">Shiraz & Yazeed · 29.6.2026</p>
+    </footer>
+  </main>
+
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const weddingDate = new Date('2026-06-29T19:00:00+03:00').getTime();
+    function updateCountdown(){
+      const now = new Date().getTime();
+      const diff = weddingDate - now;
+      if(diff <= 0) return;
+      document.getElementById('days').textContent = Math.floor(diff/(1000*60*60*24));
+      document.getElementById('hours').textContent = Math.floor((diff%(1000*60*60*24))/(1000*60*60)).toString().padStart(2,'0');
+      document.getElementById('minutes').textContent = Math.floor((diff%(1000*60*60))/(1000*60)).toString().padStart(2,'0');
+      document.getElementById('seconds').textContent = Math.floor((diff%(1000*60))/1000).toString().padStart(2,'0');
+    }
+    setInterval(updateCountdown,1000); updateCountdown();
+
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{if(entry.isIntersecting) entry.target.classList.add('show')})
+    },{threshold:.18});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    function toggleMusic(){
+      const audio = document.getElementById('music');
+      if(audio.paused) audio.play(); else audio.pause();
+    }
+  </script>
+</body>
+</html>
