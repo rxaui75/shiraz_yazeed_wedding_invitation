@@ -15,6 +15,7 @@
       --dark:#2b2926;
       --olive:#6f7750;
       --burgundy:#74131b;
+      --deepgreen:#4f5f35;
       --soft:#e9dfcf;
     }
 
@@ -60,13 +61,13 @@
     .hero{height:100vh;min-height:760px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:url('skyhall-1.png') center/cover no-repeat;}
     .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(255,255,255,.10) 34%,rgba(255,255,255,.82) 100%)}
     .hero:after{content:"";position:absolute;width:520px;height:520px;background:radial-gradient(circle,rgba(255,255,255,.88),rgba(255,255,255,.35) 42%,transparent 70%);filter:blur(2px)}
-    .music{position:absolute;right:18px;top:22px;z-index:5;width:55px;height:55px;border-radius:50%;border:1px solid rgba(255,255,255,.75);background:rgba(82,61,35,.56);color:white;display:grid;place-items:center;font-size:11px;backdrop-filter:blur(6px)}
+    .music{position:absolute;right:18px;top:22px;z-index:5;width:55px;height:55px;border-radius:50%;border:1px solid rgba(255,255,255,.75);background:rgba(82,61,35,.56);color:white;display:grid;place-items:center;font-size:11px;backdrop-filter:blur(6px);cursor:pointer}
     .music span{font-size:22px;display:block;line-height:1}
-    .hero-content{position:relative;z-index:3;padding:0 24px;animation:fadeUp 1.3s ease both}
-    .eyebrow{font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:3px;text-transform:uppercase;color:#39332c;line-height:1.5;margin-bottom:20px}
+    .hero-content{position:relative;z-index:3;padding:0 24px;animation:fadeUp 1.3s ease both;margin-top:80px}
+    .eyebrow{position:absolute;left:18px;right:18px;top:185px;z-index:4;font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:3px;text-transform:uppercase;color:#39332c;line-height:1.5;margin-bottom:20px;text-shadow:0 1px 14px rgba(255,255,255,.85)}
     h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:68px;line-height:.88;color:#33302c;text-shadow:0 1px 18px rgba(255,255,255,.6)}
     .and{font-family:'Great Vibes',cursive;font-size:42px;color:var(--gold);margin:8px 0}
-    .heart-line{margin:22px auto;color:var(--gold);font-size:24px;display:flex;align-items:center;gap:12px;justify-content:center}.heart-line:before,.heart-line:after{content:"";width:50px;height:1px;background:var(--gold)}
+    .heart-line{margin:22px auto;color:#fff;font-size:24px;display:flex;align-items:center;gap:12px;justify-content:center}.heart-line:before,.heart-line:after{content:"";width:50px;height:1px;background:var(--gold)}
     .scroll{position:absolute;bottom:48px;left:0;right:0;z-index:4;color:#6d5b45;font-family:'Cormorant Garamond',serif;letter-spacing:1px;font-size:14px}.mouse{width:24px;height:42px;border:2px solid #fff;border-radius:20px;margin:0 auto 8px;position:relative}.mouse:after{content:"";width:4px;height:8px;background:#fff;border-radius:6px;position:absolute;top:8px;left:50%;transform:translateX(-50%);animation:wheel 1.3s infinite}
 
     section{padding:48px 22px;position:relative}.title{font-family:'Cormorant Garamond',serif;text-align:center;color:var(--gold);font-size:24px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:12px}.title:before,.title:after{content:"";height:1px;width:55px;background:var(--gold);opacity:.55}
@@ -74,10 +75,10 @@
     .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}.countdown div:not(:last-child){border-right:1px solid #ded4c6}.num{font-family:'Cormorant Garamond',serif;color:#8a6a3b;font-size:40px;line-height:1}.label{font-size:10px;text-transform:uppercase;letter-spacing:.8px;margin-top:6px}
     .date-box{text-align:center;margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:22px}.date-box span{display:block;font-family:'Montserrat';font-size:12px;color:#746a5c;letter-spacing:2px;text-transform:uppercase;margin-top:5px}
 
-    .timeline{padding:58px 22px 66px;background:linear-gradient(180deg,#6f0f18 0%,#7d141d 55%,#6b1018 100%);color:#fff;overflow:hidden}.timeline:before,.timeline:after{content:"";position:absolute;left:-8%;width:116%;height:34px;background:#fffdf8;z-index:1;filter:drop-shadow(0 4px 5px rgba(0,0,0,.05))}.timeline:before{top:-1px;clip-path:polygon(0 0,100% 0,100% 42%,92% 68%,83% 48%,73% 72%,61% 50%,49% 76%,38% 52%,27% 72%,16% 47%,7% 69%,0 45%)}.timeline:after{bottom:-1px;clip-path:polygon(0 58%,8% 35%,17% 52%,28% 30%,39% 52%,50% 28%,61% 50%,73% 31%,84% 54%,93% 34%,100% 55%,100% 100%,0 100%)}.timeline .title{color:#f8efe7;position:relative;z-index:2;font-family:'Great Vibes',cursive;text-transform:none;letter-spacing:.5px;font-size:34px}.timeline .title:before,.timeline .title:after{background:#eacda0}.schedule-wrap{position:relative;z-index:2;width:min(330px,100%);margin:14px auto 0;padding:8px 0 0}.schedule-line{position:absolute;top:16px;bottom:18px;left:50%;width:1px;background:rgba(255,255,255,.75);transform:translateX(-50%)}.schedule-item{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;min-height:86px}.schedule-time{font-family:'Cormorant Garamond',serif;font-size:28px;text-align:right;padding-right:16px;color:#fff}.schedule-dot{width:11px;height:11px;border-radius:50%;background:#fff;margin:auto;box-shadow:0 0 0 6px rgba(255,255,255,.08);z-index:2}.schedule-dot.big{width:46px;height:46px;background:#f8efe7;box-shadow:0 0 0 7px rgba(255,255,255,.14);display:grid;place-items:center}.schedule-dot.big:after{content:'✿';color:#7a141d;font-size:23px}.schedule-name{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.05;text-align:left;padding-left:16px;color:#fff}.schedule-note{text-align:center;margin-top:20px;font-family:'Cormorant Garamond',serif;color:#f2d9bd;font-size:18px;letter-spacing:.3px}
+    .timeline{padding:58px 22px 66px;background:linear-gradient(180deg,#4f5f35 0%,#5f6f42 55%,#46572f 100%);color:#fff;overflow:hidden}.timeline:before,.timeline:after{content:"";position:absolute;left:-8%;width:116%;height:34px;background:#fffdf8;z-index:1;filter:drop-shadow(0 4px 5px rgba(0,0,0,.05))}.timeline:before{top:-1px;clip-path:polygon(0 0,100% 0,100% 42%,92% 68%,83% 48%,73% 72%,61% 50%,49% 76%,38% 52%,27% 72%,16% 47%,7% 69%,0 45%)}.timeline:after{bottom:-1px;clip-path:polygon(0 58%,8% 35%,17% 52%,28% 30%,39% 52%,50% 28%,61% 50%,73% 31%,84% 54%,93% 34%,100% 55%,100% 100%,0 100%)}.timeline .title{color:#f8efe7;position:relative;z-index:2;font-family:'Great Vibes',cursive;text-transform:none;letter-spacing:.5px;font-size:34px}.timeline .title:before,.timeline .title:after{background:#eacda0}.schedule-wrap{position:relative;z-index:2;width:min(330px,100%);margin:14px auto 0;padding:8px 0 0}.schedule-line{position:absolute;top:16px;bottom:18px;left:50%;width:1px;background:rgba(255,255,255,.75);transform:translateX(-50%)}.moving-flower{position:absolute;left:50%;top:16px;width:50px;height:50px;border-radius:50%;background:#f8efe7;box-shadow:0 0 0 8px rgba(255,255,255,.16),0 8px 22px rgba(0,0,0,.12);transform:translate(-50%,0);display:grid;place-items:center;z-index:5;transition:top .18s linear}.moving-flower:after{content:'✿';color:#526235;font-size:24px}.schedule-item{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;min-height:86px}.schedule-time{font-family:'Cormorant Garamond',serif;font-size:28px;text-align:right;padding-right:16px;color:#fff}.schedule-dot{width:11px;height:11px;border-radius:50%;background:#fff;margin:auto;box-shadow:0 0 0 6px rgba(255,255,255,.08);z-index:2}.schedule-dot.big{width:46px;height:46px;background:#f8efe7;box-shadow:0 0 0 7px rgba(255,255,255,.14);display:grid;place-items:center}.schedule-dot.big:after{content:''}.schedule-name{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.05;text-align:left;padding-left:16px;color:#fff}.schedule-note{text-align:center;margin-top:20px;font-family:'Cormorant Garamond',serif;color:#f2d9bd;font-size:18px;letter-spacing:.3px}
 
     .details-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{text-align:center;padding:18px 10px}.mini .i{font-size:26px;color:#8b6c3e;margin-bottom:8px}.mini h3{font-family:'Cormorant Garamond',serif;color:#9d7a43;text-transform:uppercase;font-size:16px;letter-spacing:1px;margin-bottom:7px}.mini p{font-size:12px;line-height:1.55}.dots{display:flex;justify-content:center;gap:9px;margin-top:6px}.dot{width:19px;height:19px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
-    .venue{display:grid;gap:20px}.venue img{width:100%;height:220px;object-fit:cover;border-radius:16px;box-shadow:0 15px 30px rgba(0,0,0,.12)}.venue-text{text-align:center}.venue-text h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500;margin:6px 0}.venue-text p{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.35;margin-bottom:18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:12px;padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:1px solid var(--gold);color:#7b5d32;background:#fff}.btn.primary{background:var(--burgundy);color:#fff;border-color:var(--burgundy);box-shadow:0 10px 22px rgba(116,19,27,.25)}
+    .venue{display:grid;gap:20px}.venue img{width:100%;height:220px;object-fit:cover;border-radius:16px;box-shadow:0 15px 30px rgba(0,0,0,.12)}.venue-text{text-align:center}.venue-text h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500;margin:6px 0}.venue-text p{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.35;margin-bottom:18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:12px;padding:15px 22px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:1px solid var(--gold);color:#7b5d32;background:#fff}.btn.primary{background:var(--deepgreen);color:#fff;border-color:var(--deepgreen);box-shadow:0 10px 22px rgba(79,95,53,.25)}
     .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gallery img{width:100%;height:210px;object-fit:cover;border-radius:18px}.gallery img:first-child{grid-column:1/3;height:260px}.gallery img:last-child{grid-column:1/3;height:250px}
     .rsvp{text-align:center}.rsvp p{font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:20px}.rsvp-actions{display:grid;grid-template-columns:1fr;gap:12px}.quote{text-align:center;padding:50px 30px 64px;background:linear-gradient(180deg,#fffdf8,#f7f0e5);position:relative}.quote:before,.quote:after{content:"✿";position:absolute;color:#d3c5aa;font-size:70px;opacity:.55}.quote:before{left:-18px;bottom:10px}.quote:after{right:-16px;top:20px}.quote h2{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:500;line-height:1.3}.quote p{margin-top:18px;color:#8b6c3e;font-family:'Cormorant Garamond',serif;font-size:18px}
     .reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.show{opacity:1;transform:translateY(0)}
@@ -102,8 +103,8 @@
   <main class="page">
     <header class="hero" id="home">
       <button class="music" onclick="toggleMusic()"><span>♫</span>Music</button>
+      <div class="eyebrow">You are invited to<br>celebrate the wedding of</div>
       <div class="hero-content">
-        <div class="eyebrow">You are invited to<br>celebrate the wedding of</div>
         <h1>Shiraz</h1>
         <div class="and">and</div>
         <h1>Yazeed</h1>
@@ -127,6 +128,7 @@
       <h2 class="title">Schedule of Events</h2>
       <div class="schedule-wrap">
         <div class="schedule-line"></div>
+        <div class="moving-flower" id="movingFlower"></div>
         <div class="schedule-item">
           <div class="schedule-time">7:00</div>
           <div class="schedule-dot big"></div>
@@ -156,7 +158,6 @@
       <div class="details-grid">
         <div class="card mini"><div class="i">◷</div><h3>Time</h3><p>7:00 p.m – 10:00 p.m</p></div>
         <div class="card mini"><div class="i">⌖</div><h3>Venue</h3><p>Sky Hall<br>Petra Street</p></div>
-        <div class="card mini"><div class="i">♕</div><h3>Dress Code</h3><p>Elegant evening colors</p><div class="dots"><span class="dot" style="background:#74131b"></span><span class="dot" style="background:#cfc4b1"></span><span class="dot" style="background:#111"></span><span class="dot" style="background:#c5a35f"></span></div></div>
         <div class="card mini"><div class="i">▣</div><h3>Date</h3><p>Monday<br>29.6.2026</p></div>
       </div>
     </section>
@@ -188,14 +189,14 @@
       <h2 class="title">Kindly RSVP</h2>
       <p>Please let us know if you’ll be joining us</p>
       <div class="rsvp-actions">
-        <a class="btn primary" href="https://wa.me/?text=Yes,%20I%20am%20coming%20to%20Shiraz%20and%20Yazeed's%20wedding" target="_blank">♡ Yes, I’m coming</a>
-        <a class="btn" href="https://wa.me/?text=Sorry,%20I%20can't%20attend%20Shiraz%20and%20Yazeed's%20wedding" target="_blank">♡ Sorry, can’t attend</a>
+        <a class="btn primary" href="https://wa.me/962799469102?text=Yes,%20I%20am%20coming%20to%20Shiraz%20and%20Yazeed%27s%20wedding%20%F0%9F%A4%8D" target="_blank">♡ Yes, I’m coming</a>
+        <a class="btn" href="https://wa.me/962799469102?text=Sorry,%20I%20can%27t%20attend%20Shiraz%20and%20Yazeed%27s%20wedding%20%F0%9F%A4%8D" target="_blank">♡ Sorry, can’t attend</a>
       </div>
     </section>
 
     <footer class="quote">
-      <h2>“And We created you in pairs”</h2>
-      <p>Quran 78:8</p>
+      <h2 lang="ar" dir="rtl">﴿وَخَلَقْنَاكُمْ أَزْوَاجًا﴾</h2>
+      <p lang="ar" dir="rtl">سورة النبأ: ٨</p>
       <p style="font-size:14px">Shiraz & Yazeed · 29.6.2026</p>
     </footer>
   </main>
@@ -229,25 +230,72 @@
       window.scrollTo(0, 0);
     });
 
+    let audioCtx, musicGain, musicTimer, musicOn = false;
+    function startSoftMusic(){
+      if(musicOn) return;
+      audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+      musicGain = musicGain || audioCtx.createGain();
+      musicGain.gain.value = 0.035;
+      musicGain.connect(audioCtx.destination);
+      const notes = [523.25, 659.25, 783.99, 659.25];
+      let i = 0;
+      function playNote(){
+        if(!musicOn) return;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = notes[i % notes.length];
+        gain.gain.setValueAtTime(0, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.12, audioCtx.currentTime + .06);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.4);
+        osc.connect(gain); gain.connect(musicGain);
+        osc.start(); osc.stop(audioCtx.currentTime + 1.45);
+        i++;
+      }
+      musicOn = true;
+      document.querySelector('.music').innerHTML = '<span>♫</span>Music';
+      playNote();
+      musicTimer = setInterval(playNote, 1500);
+    }
+    function stopSoftMusic(){
+      musicOn = false;
+      clearInterval(musicTimer);
+      document.querySelector('.music').innerHTML = '<span>♪</span>Muted';
+    }
+
     function openInvitation(){
       const intro = document.getElementById('intro');
       if(!intro || intro.classList.contains('opening')) return;
       if (location.hash) history.replaceState(null, '', location.pathname + location.search);
       window.scrollTo(0, 0);
+      startSoftMusic();
       intro.classList.add('opening');
       setTimeout(()=>{
         intro.classList.add('hide');
         document.body.classList.remove('lock');
         window.scrollTo({top:0,left:0,behavior:'instant'});
-        const audio = document.getElementById('music');
-        if(audio) audio.play().catch(()=>{});
       }, 1500);
     }
 
     function toggleMusic(){
-      const audio = document.getElementById('music');
-      if(audio.paused) audio.play(); else audio.pause();
+      if(musicOn) stopSoftMusic(); else startSoftMusic();
     }
+
+    function updateMovingFlower(){
+      const section = document.querySelector('.timeline');
+      const flower = document.getElementById('movingFlower');
+      const line = document.querySelector('.schedule-line');
+      if(!section || !flower || !line) return;
+      const rect = section.getBoundingClientRect();
+      const start = window.innerHeight * 0.72;
+      const end = -rect.height * 0.15;
+      let progress = (start - rect.top) / (start - end);
+      progress = Math.max(0, Math.min(1, progress));
+      const max = line.offsetHeight - 50;
+      flower.style.top = (16 + max * progress) + 'px';
+    }
+    window.addEventListener('scroll', updateMovingFlower, {passive:true});
+    window.addEventListener('load', updateMovingFlower);
   </script>
 </body>
 </html>
