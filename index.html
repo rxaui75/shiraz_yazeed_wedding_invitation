@@ -84,27 +84,72 @@
     .reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.show{opacity:1;transform:translateY(0)}
     @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes wheel{0%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,15px)}}
     @media(min-width:700px){body{padding:30px}.page{border-radius:28px}.hero{min-height:820px}.events{grid-template-columns:repeat(3,1fr)}.rsvp-actions{grid-template-columns:1fr 1fr}.venue{grid-template-columns:1fr 1fr;align-items:center}.gallery img{height:260px}}
-  .rand-footer{
-  text-align:center;
-  padding:34px 22px 42px;
-  background:linear-gradient(180deg,#f7f0e5,#eee3d4);
-  border-top:1px solid rgba(184,149,88,.22);
-  font-family:'Cormorant Garamond',serif;
-  color:#6f6252;
-}
-.rand-footer a{
-  display:inline-block;
-  margin:8px 0;
+ .rand-footer button{
+  border:0;
+  background:transparent;
   color:var(--deepgreen);
+  font-family:'Cormorant Garamond',serif;
   font-size:24px;
   text-decoration:underline;
+  cursor:pointer;
+  margin:8px 0;
 }
-.rand-footer small{
-  display:block;
-  font-family:'Montserrat',sans-serif;
-  font-size:10px;
-  letter-spacing:1px;
-  text-transform:uppercase;
+
+.sheet-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  z-index:1100;
+  display:none;
+  align-items:flex-end;
+}
+
+.sheet-backdrop.show{
+  display:flex;
+}
+
+.sheet{
+  width:100%;
+  max-width:430px;
+  margin:auto;
+  background:#fffdf8;
+  border-radius:26px 26px 0 0;
+  padding:20px 24px 30px;
+  text-align:center;
+  box-shadow:0 -20px 50px rgba(0,0,0,.2);
+  animation:sheetUp .28s ease;
+}
+
+.sheet-handle{
+  width:48px;
+  height:5px;
+  background:#d8ccba;
+  border-radius:20px;
+  margin:0 auto 18px;
+}
+
+.sheet h3{
+  font-family:'Great Vibes',cursive;
+  font-size:48px;
+  color:var(--deepgreen);
+  font-weight:400;
+}
+
+.sheet p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  color:#6f6252;
+  margin:10px 0 18px;
+}
+
+.sheet .btn{
+  width:100%;
+  margin-top:10px;
+}
+
+@keyframes sheetUp{
+  from{transform:translateY(100%)}
+  to{transform:translateY(0)}
 }
   </style>
 </head>
@@ -371,6 +416,14 @@ function stopSoftMusic(){
     }
     window.addEventListener('scroll', updateMovingFlower, {passive:true});
     window.addEventListener('load', updateMovingFlower);
+
+    function openRandSheet(){
+  document.getElementById('randSheet').classList.add('show');
+}
+
+function closeRandSheet(){
+  document.getElementById('randSheet').classList.remove('show');
+}
   </script>
 </body>
 </html>
